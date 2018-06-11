@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "568590032149",
+    "firebase_url": "https://lenschart-df661.firebaseio.com",
+    "project_id": "lenschart-df661",
+    "storage_bucket": "lenschart-df661.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568590032149:android:6ff8d2d67293dc6a",
+        "android_client_info": {
+          "package_name": "com.ghen61.lenseye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568590032149-d8igg4ee5052971ochlm1al6u77a8dd4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ghen61.lenseye",
+            "certificate_hash": "7ffceb7337746765dde7b350830c0c669497ee3e"
+          }
+        },
+        {
+          "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASlSxTE4ILUjtqkEOUqES3zL8dhwiCcFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568590032149:android:af73568c47e782b1",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.arum.graphtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568590032149-pd6hroj776m6b6v34s8nub97vmmv8aia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.emirim.arum.graphtest",
+            "certificate_hash": "8a236fd9d1e8290434899c83652b20d285ccc76b"
+          }
+        },
+        {
+          "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASlSxTE4ILUjtqkEOUqES3zL8dhwiCcFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568590032149:android:abd66faa7e2dfcec",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.wwhurin.lenseye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568590032149-qjvn1jm32a88924eo3ic5710v9v8l25a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.emirim.wwhurin.lenseye",
+            "certificate_hash": "fbdb6bf244cf686b70e154ebd0763f544bbd4ce9"
+          }
+        },
+        {
+          "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASlSxTE4ILUjtqkEOUqES3zL8dhwiCcFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568590032149-70onmlh9oldgociulnn0kcnruun3pon8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
