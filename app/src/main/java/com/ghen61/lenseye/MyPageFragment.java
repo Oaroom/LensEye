@@ -99,7 +99,7 @@ public class MyPageFragment extends Fragment {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Lense lense = dataSnapshot.getValue(Lense.class);  // chatData를 가져오고
-                adapter.add(lense.getName() + "  >>   " +lense.getDate()+" ~ "+lense.getDisuse());  // adapter에 추가합니다.
+                adapter.add(" [ "+lense.getName() + " ]    " +lense.getDate()+" ~ "+lense.getDisuse());  // adapter에 추가합니다.
             }
 
             @Override

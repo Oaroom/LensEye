@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="30dp"
     android:layout_marginTop="200dp"
-    android:background="@drawable/popup"
+    android:background="@drawable/rounded"
+    android:padding="40dp"
     android:orientation="vertical">
 
 
@@ -21,7 +22,8 @@
             android:gravity="center"
             android:text="렌즈를 선택하세요"
             android:textColor="#6EADDC"
-            android:textSize="40sp" />
+            android:layout_marginBottom="20dp"
+            android:textSize="30sp" />
 
     </LinearLayout>
 
@@ -42,10 +44,14 @@
             android:id="@+id/lenseList"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_weight="1"></ListView>
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            ></ListView>
 
 
     </LinearLayout>
+
+
 
 
     <LinearLayout
@@ -122,16 +128,24 @@
         <Button
             android:id="@+id/closeBt"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/canclebt" />
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:background="@drawable/roundb"
+            android:layout_margin="10dp"
+            android:text="취소" />
 
         <Button
             android:id="@+id/submitBt"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/okay" />
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:background="@drawable/roundb"
+            android:layout_margin="10dp"
+            android:text="확인" />
     </LinearLayout>
 
 </LinearLayout>

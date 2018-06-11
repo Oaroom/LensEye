@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment {
     String Label[] = {"m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08",
             "m09", "m10", "m11", "m12"};
     //int cnt[] = new int[12];
-    int cnt[] = {0,5,7,8,9,4,1,0,0,0,0,15};
+    int cnt[] = {0,0,0,0,0,0,0,0,0,0,0,0};
 
     View view;
     // private OnFragmentInteractionListener mListener;
@@ -123,6 +123,8 @@ public class HomeFragment extends Fragment {
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setTextSize(15f);
         xAxis.setDrawGridLines(false);
+        xAxis.setAxisMaximum(12);
+        xAxis.setAxisMinimum(0);
 
         YAxis leftAxis = chart.getAxisLeft();
         leftAxis.setTextSize(15f);
@@ -135,7 +137,10 @@ public class HomeFragment extends Fragment {
 
         LineData data = new LineData();
         chart.setData(data);
-        //chart.setVisibleXRangeMaximum(12);
+
+//        chart.setVisibleXRangeMaximum(12);
+//        chart.setVisibleXRangeMinimum(1);
+
         feedMultiple();
 
         chart.notifyDataSetChanged(); // let the chart know it's data changed
@@ -170,12 +175,13 @@ public class HomeFragment extends Fragment {
 
                 readData(userId);
 
-//                LineData data = new LineData();
-//                chart.setData(data);
-//                //chart.setVisibleXRangeMaximum(12);
-//                feedMultiple();
-//                chart.notifyDataSetChanged(); // let the chart know it's data changed
-//                chart.invalidate(); // refresh
+                LineData data = new LineData();
+                chart.setData(data);
+                //chart.setVisibleXRangeMaximum(12);
+                chart.setVisibleXRangeMinimum(1);
+                feedMultiple();
+                chart.notifyDataSetChanged(); // let the chart know it's data changed
+                chart.invalidate(); // refresh
 
             }
         };
@@ -229,8 +235,7 @@ public class HomeFragment extends Fragment {
                 cnt[4] = month.getM05();
                 cnt[5] = month.getM06();
 
-                //cnt[6] = month.getM07();
-                cnt[6] = 19;
+                cnt[6] = month.getM07();
                 cnt[7] = month.getM08();
                 cnt[8] = month.getM09();
 
@@ -279,6 +284,7 @@ public class HomeFragment extends Fragment {
 
             ILineDataSet set = data.getDataSetByIndex(0);
 
+
             if(set == null ){
 
                 set = createSet();
@@ -287,21 +293,24 @@ public class HomeFragment extends Fragment {
             }
 
             for(int i = 0 ; i < 12 ; i++) {
-                data.addEntry(new Entry(set.getEntryCount(), cnt[i]), 0);
+                data.addEntry(new Entry(set.getEntryCount()+1, cnt[i]), 0);
             }
 
-            //
-            data.notifyDataChanged();
 
+            data.notifyDataChanged();
             chart.notifyDataSetChanged();
             chart.setVisibleXRangeMaximum(10);
             chart.moveViewToX(data.getEntryCount());
+            chart.notifyDataSetChanged(); // let the chart know it's data changed
+            chart.invalidate(); // refresh
+
         }
     }
 
     private LineDataSet createSet() {
         LineDataSet set = new LineDataSet(null,"Your lens"); //데이터셋의 이름 정하고, 기본 값은 null
         set.setAxisDependency(YAxis.AxisDependency.LEFT); // YAxis의 LEFT를 기본으로 설정
+
         set.setColor(Color.rgb(199,217,238)); //데이터 라인색 : HoloBule()
         set.setLineWidth(8f); //라인의 두께를 2f로 설정
         set.setCircleRadius(15f); // 라인의 점의 반지름을 4f 로 설정
@@ -344,6 +353,11 @@ public class HomeFragment extends Fragment {
         });
 
         thread.start();
+
+
+        chart.notifyDataSetChanged(); // let the chart know it's data changed
+        chart.invalidate(); // refresh
+
 
     }
 
