@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -86,7 +87,6 @@ public class addLense extends Dialog implements View.OnClickListener {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_addlense);
-
 
         closeBt = (Button) findViewById(R.id.closeBt);
         submitBt = (Button) findViewById(R.id.submitBt);
