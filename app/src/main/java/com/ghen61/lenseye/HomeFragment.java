@@ -86,12 +86,12 @@ public class HomeFragment extends Fragment {
 
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
-
 
 
         MText = (TextView) view.findViewById(R.id.MText);
@@ -118,6 +118,7 @@ public class HomeFragment extends Fragment {
         chart.getLegend().setTextColor(Color.rgb(110,173,220));
         chart.setBorderColor(Color.rgb(110,173,220));
 
+        chart.setVisibleXRangeMinimum(1);
 
         XAxis xAxis = chart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
@@ -131,7 +132,14 @@ public class HomeFragment extends Fragment {
         leftAxis.setDrawGridLines(false);
 
 
+
+
+
+
         readData(userId);
+        feedMultiple();
+        addEntry();
+
         //Toast.makeText(this, String.valueOf(cnt[Month - 1]+1), Toast.LENGTH_SHORT).show();
         MText.setText(mon[Month - 1]);
 
@@ -146,6 +154,15 @@ public class HomeFragment extends Fragment {
         chart.notifyDataSetChanged(); // let the chart know it's data changed
         chart.invalidate(); // refresh
 
+        readData(userId);
+        addEntry();
+        data = new LineData();
+        chart.setData(data);
+        //chart.setVisibleXRangeMaximum(12);
+        feedMultiple();
+        chart.notifyDataSetChanged(); // let the chart know it's data changed
+        chart.invalidate(); // refresh
+        addEntry();
 
 
 
@@ -167,21 +184,34 @@ public class HomeFragment extends Fragment {
                     addlense.getInfo(userId,cnt[Month-1],Month);
                     addlense.show();
 
+                    addEntry();
+                    readData(userId);
+                    LineData data = new LineData();
+                    chart.setData(data);
+                    //chart.setVisibleXRangeMaximum(12);
+                    feedMultiple();
+                    chart.notifyDataSetChanged(); // let the chart know it's data changed
+                    chart.invalidate(); // refresh
+                    addEntry();
+
+
                 }else{
 
                     Toast.makeText(getContext(), "한 달에 착용할 수 있는 범위를 넘어섰습니다", Toast.LENGTH_SHORT).show();
 
                 }
 
-                readData(userId);
 
+                addEntry();
+                readData(userId);
                 LineData data = new LineData();
                 chart.setData(data);
                 //chart.setVisibleXRangeMaximum(12);
-                chart.setVisibleXRangeMinimum(1);
                 feedMultiple();
                 chart.notifyDataSetChanged(); // let the chart know it's data changed
                 chart.invalidate(); // refresh
+                addEntry();
+
 
             }
         };
@@ -249,6 +279,17 @@ public class HomeFragment extends Fragment {
 //
                 //Toast.makeText(getApplicationContext(),num, Toast.LENGTH_LONG).show();
 
+
+                addEntry();
+                LineData data = new LineData();
+                chart.setData(data);
+                //chart.setVisibleXRangeMaximum(12);
+                feedMultiple();
+                chart.notifyDataSetChanged(); // let the chart know it's data changed
+                chart.invalidate(); // refresh
+                addEntry();
+
+
             }
 
             @Override
@@ -276,6 +317,12 @@ public class HomeFragment extends Fragment {
     }
 
     private void addEntry(){
+
+
+
+
+        chart.notifyDataSetChanged(); // let the chart know it's data changed
+        chart.invalidate(); // refresh
 
         Log.v("LENSE","값이 들어가나??!????!");
 
