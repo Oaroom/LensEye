@@ -142,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
                     bundle.putString("userId", userId); // key , value
                     fragment.setArguments(bundle);
                     return new HomeFragment();
+                case 2:
+                    return new ContentActivity();
+
                 }
             return new MyPageFragment();
 

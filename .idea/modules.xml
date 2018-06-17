@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LensEye.iml" filepath="$PROJECT_DIR$/LensEye.iml" />
+      <module fileurl="file://C:\Users\LG\AndroidStudioProjects\LensEye\LensEye.iml" filepath="C:\Users\LG\AndroidStudioProjects\LensEye\LensEye.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\LG\AndroidStudioProjects\LensEye\app\app.iml" filepath="C:\Users\LG\AndroidStudioProjects\LensEye\app\app.iml" />
     </modules>
   </component>
 </project>
