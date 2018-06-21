@@ -2,6 +2,8 @@ package com.ghen61.lenseye;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -55,6 +57,8 @@ public class addLense extends Dialog implements View.OnClickListener {
     private int nowMonth;
 
 
+
+
     private LineChart chart;
 
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -95,6 +99,10 @@ public class addLense extends Dialog implements View.OnClickListener {
 
         closeBt.setOnClickListener(this);
         submitBt.setOnClickListener(this);
+
+
+        int color = Color.parseColor("#6EADDC");
+        lenseName.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
 
         final ListView listview = (ListView) findViewById(R.id.lenseList);
         adapter = new ArrayAdapter<>(this.getContext(),android.R.layout.simple_list_item_1, android.R.id.text1);

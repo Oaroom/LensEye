@@ -2,6 +2,7 @@ package com.ghen61.lenseye;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,7 +17,9 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.github.mikephil.charting.data.LineData;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -64,7 +67,6 @@ public class ContentActivity extends Fragment {
 
 
 
-
     }
 
 
@@ -79,6 +81,8 @@ public class ContentActivity extends Fragment {
 
         ListView listView = (ListView)view.findViewById(R.id.contentlist);
         ContentAdapter contentAdapter  = new ContentAdapter();
+
+
 
 
         // 첫 번째 아이템 추가.
