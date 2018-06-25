@@ -1,6 +1,9 @@
 package com.ghen61.lenseye;
 
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,9 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.data.LineData;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,8 +39,8 @@ public class MyPageFragment extends Fragment {
     View view;
     addLense addlense;
 
-    public Button settingBt;
-    public Button plusBt;
+
+    public ImageButton setting;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference dbRef;
     public LenseAdapter adapter;
@@ -76,14 +81,40 @@ public class MyPageFragment extends Fragment {
 
 
 
+
         addlense = new addLense(view.getContext());
         addlense.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+
+        final ImageButton settingB = (ImageButton) view.findViewById(R.id.settingB);
+
+
+
+
+
+        View.OnClickListener listener = new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+             /*   Intent intent = new Intent(MyPageFragment.this,SettingActivity.class);
+                startActivity(intent);
+*/
+
+
+            }
+        };
+
+        settingB.setOnClickListener(listener);
+
+
+
+
 
 
 
 
        final ListView listView = (ListView) view.findViewById(R.id.listView);
-
         // 기본 Text를 담을 수 있는 simple_list_item_1을 사용해서 ArrayAdapter를 만들고 listview에 설정
         adapter =  new LenseAdapter();
         listView.setAdapter(adapter);

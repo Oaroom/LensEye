@@ -80,6 +80,7 @@
             android:background="@drawable/plus" />
 
         <ImageButton
+            android:id="@+id/settingB"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:background="@drawable/setting" />
