@@ -38,7 +38,7 @@ public class MyPageFragment extends Fragment {
     public Button plusBt;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference dbRef;
-    public ArrayAdapter adapter;
+    public LenseAdapter adapter;
     ArrayList<String> list = new ArrayList<>();
 
 
@@ -68,10 +68,6 @@ public class MyPageFragment extends Fragment {
 
     }
 
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -86,10 +82,10 @@ public class MyPageFragment extends Fragment {
 
 
 
-        ListView listView = (ListView) view.findViewById(R.id.listView);
+       final ListView listView = (ListView) view.findViewById(R.id.listView);
 
         // 기본 Text를 담을 수 있는 simple_list_item_1을 사용해서 ArrayAdapter를 만들고 listview에 설정
-        adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_list_item_1, android.R.id.text1);
+        adapter =  new LenseAdapter();
         listView.setAdapter(adapter);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -100,8 +96,11 @@ public class MyPageFragment extends Fragment {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Lense lense = dataSnapshot.getValue(Lense.class);  // chatData를 가져오고
-                adapter.add(" [ "+lense.getName() + " ]    " +lense.getDate()+" ~ "+lense.getDisuse());  // adapter에 추가합니다.
-            }
+                adapter.addItem(lense.getName() ,lense.getDate().toString(),lense.getDisuse().toString());  // adapter에 추가합니다.
+                listView.setAdapter(adapter);
+
+
+                     }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) { }

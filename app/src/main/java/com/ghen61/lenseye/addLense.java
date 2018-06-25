@@ -69,7 +69,7 @@ public class addLense extends Dialog implements View.OnClickListener {
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference dbRef;
-    public ArrayAdapter adapter;
+    public LenseAdapter adapter;
     ArrayList<String> lenseList = new ArrayList<>();
 
 
@@ -104,8 +104,11 @@ public class addLense extends Dialog implements View.OnClickListener {
         int color = Color.parseColor("#6EADDC");
         lenseName.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
 
+        adapter = new LenseAdapter();
+
         final ListView listview = (ListView) findViewById(R.id.lenseList);
-        adapter = new ArrayAdapter<>(this.getContext(),android.R.layout.simple_list_item_1, android.R.id.text1);
+        listview.setAdapter(adapter);
+        //adapter = new ArrayAdapter<>(this.getContext(),android.R.layout.simple_list_item_1, android.R.id.text1);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         dbRef = firebaseDatabase.getReference();
@@ -115,7 +118,7 @@ public class addLense extends Dialog implements View.OnClickListener {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Lense lense = dataSnapshot.getValue(Lense.class);  // chatData를 가져오고
-                adapter.add( " [  " +lense.getName() + " ]  " +lense.getDate()+" ~ "+lense.getDisuse());  // adapter에 추가합니다.
+                adapter.addItem(lense.getName() ,lense.getDate().toString(),lense.getDisuse().toString());  // adapter에 추가합니다.
                 listview.setAdapter(adapter);
             }
 
