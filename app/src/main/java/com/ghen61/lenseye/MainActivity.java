@@ -36,8 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three

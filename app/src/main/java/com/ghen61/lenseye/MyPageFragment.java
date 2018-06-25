@@ -100,18 +100,13 @@ public class MyPageFragment extends Fragment {
              /*   Intent intent = new Intent(MyPageFragment.this,SettingActivity.class);
                 startActivity(intent);
 */
-
+            Intent intent = new Intent(getActivity(),SettingActivity.class);
+            startActivity(intent);
 
             }
         };
 
         settingB.setOnClickListener(listener);
-
-
-
-
-
-
 
 
        final ListView listView = (ListView) view.findViewById(R.id.listView);
