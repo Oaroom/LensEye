@@ -3,30 +3,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
      android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    >
 
 
     <LinearLayout
-        android:layout_width="350dp"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#ffffff"
-        android:layout_marginTop="94dp">
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/addlense"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:text="렌즈를 선택하세요"
-        android:background="#6EADDC"
-        android:textColor="#ffffff"
-        android:textSize="30sp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/addtitle"
+            android:gravity="center"
+            android:text="렌즈를 선택하세요"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
 
         <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
+            android:layout_width="500dp"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:orientation="vertical"
@@ -56,7 +59,7 @@
                 <ListView
                     android:id="@+id/lenseList"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="300dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"></ListView>
 
@@ -66,8 +69,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -80,9 +82,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:padding="10px"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10px">
 
 
                 <TextView
@@ -97,7 +99,7 @@
                 <EditText
                     android:id="@+id/lenseName"
                     android:layout_width="180dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:selectAllOnFocus="false"
@@ -111,16 +113,16 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
                 android:layout_weight="0"
                 android:orientation="horizontal"
-                android:padding="10px"
-                android:layout_marginBottom="20dp">
+                android:padding="10px">
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="right"
                     android:text="기간"
                     android:textSize="20dp" />
@@ -128,7 +130,7 @@
                 <Spinner
                     android:id="@+id/lenseTime"
                     android:layout_width="180dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
                     android:entries="@array/time" />
 
@@ -140,26 +142,44 @@
                 android:orientation="horizontal"
                 android:textAlignment="center">
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
                 <Button
                     android:id="@+id/closeBt"
                     android:layout_width="110dp"
                     android:layout_height="50dp"
-                    android:layout_margin="10dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
                     android:layout_weight="0"
                     android:background="@drawable/roundb"
                     android:text="취소"
                     android:textColor="#ffffff"
                     android:textSize="20dp" />
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
                 <Button
                     android:id="@+id/submitBt"
                     android:layout_width="110dp"
                     android:layout_height="50dp"
-                    android:layout_margin="10dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/roundb"
                     android:text="확인"
                     android:textColor="#ffffff"
                     android:textSize="20dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

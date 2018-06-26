@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="30dp">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -48,14 +49,17 @@
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/chart"
             android:layout_width="match_parent"
-            android:layout_height="300dp" />
+            android:layout_height="600dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
 
-        <Button
+        <ImageButton
             android:id="@+id/addLens"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-
-            android:background="@drawable/lenseuse" />
+            android:layout_height="150dp"
+            android:background="@drawable/lenseuse"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"

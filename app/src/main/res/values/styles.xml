@@ -22,7 +22,9 @@
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
     </style>
 
-
+    <style name="tabtext" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">10pt</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

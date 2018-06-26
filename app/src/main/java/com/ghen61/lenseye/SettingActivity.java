@@ -39,7 +39,7 @@ public class SettingActivity extends AppCompatActivity {
 
        firebaseDatabase = FirebaseDatabase.getInstance();
        dbRef = firebaseDatabase.getReference();
-       DatabaseReference lenseRef = dbRef.child("User").child("Lense").child("ghen601").child("LenseInfo");
+       final DatabaseReference lenseRef = dbRef.child("User").child("Lense").child("ghen601").child("LenseInfo");
 
 
        lenseRef.addChildEventListener(new ChildEventListener() {
@@ -98,8 +98,14 @@ public class SettingActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
 
+                        String url = adapter.getItem(i).toString();
+
+                        Toast.makeText(SettingActivity.this, url, Toast.LENGTH_SHORT).show();
+
+                      //  lenseRef.child("/"+url).removeValue();
+
                         dialog.dismiss();
-                        Toast.makeText(SettingActivity.this, "렌즈가 폐기 되었습니다.", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(SettingActivity.this, "렌즈가 폐기 되었습니다.", Toast.LENGTH_SHORT).show();
                     }
                 });
 

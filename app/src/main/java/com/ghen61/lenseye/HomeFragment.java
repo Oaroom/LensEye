@@ -11,6 +11,7 @@ package com.ghen61.lenseye;
     import android.view.View;
     import android.view.ViewGroup;
     import android.widget.Button;
+    import android.widget.ImageButton;
     import android.widget.TextView;
     import android.widget.Toast;
 
@@ -55,7 +56,7 @@ public class HomeFragment extends Fragment {
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     DateFormat dateFormat;
-    Button button;
+    ImageButton button;
     int Month;
 
     String userId = "ghen601";
@@ -96,7 +97,7 @@ public class HomeFragment extends Fragment {
 
         MText = (TextView) view.findViewById(R.id.MText);
         countValue = (TextView) view.findViewById(R.id.countValue);
-        button = (Button) view.findViewById(R.id.addLens);
+        button = (ImageButton) view.findViewById(R.id.addLens);
 
 
         checkMonth();
